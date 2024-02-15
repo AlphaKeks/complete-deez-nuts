@@ -1,0 +1,12 @@
+---@meta _
+
+---@class CompletionItem
+---
+---@field start_col integer
+---@field input_text string
+---@field insert_text string
+---@field display_text string
+---@field extra_text? string
+---@field snippet_text? string
+---@field kind? string
+---@field extra_data? table
