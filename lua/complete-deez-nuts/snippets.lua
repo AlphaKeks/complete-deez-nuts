@@ -14,7 +14,9 @@ function M.expand(snippet, start_col, end_col)
   local row = cursor[1] - 1
 
   vim.api.nvim_buf_set_text(current_buf, row, start_col, row, end_col, {})
-  vim.snippet.expand(snippet)
+  vim.schedule(function()
+    vim.snippet.expand(snippet)
+  end)
 end
 
 return M
